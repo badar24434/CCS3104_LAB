@@ -13,4 +13,6 @@ module com.csc3402.lab.ccs3104_lab {
 
     opens com.csc3402.lab.ccs3104_lab to javafx.fxml;
     exports com.csc3402.lab.ccs3104_lab;
+    exports com.csc3402.lab.ccs3104_lab.LAB1;
+    opens com.csc3402.lab.ccs3104_lab.LAB1 to javafx.fxml;
 }

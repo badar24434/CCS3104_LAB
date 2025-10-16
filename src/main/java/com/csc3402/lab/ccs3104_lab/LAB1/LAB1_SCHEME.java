@@ -1,4 +1,4 @@
-package com.csc3402.lab.ccs3104_lab;
+package com.csc3402.lab.ccs3104_lab.LAB1;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
