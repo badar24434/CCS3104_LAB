@@ -33,7 +33,7 @@ public class EXAMPLE_LAB1 extends Application {
 
         // Create a scene and plane it in the stage
         Scene scene = new Scene(pane);
-        primaryStage.setTitle("Exercise_14_07"); // Set the stage title
+        primaryStage.setTitle("LAB1_EXAMPLE"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
     }
