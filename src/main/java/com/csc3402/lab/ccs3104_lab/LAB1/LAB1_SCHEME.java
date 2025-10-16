@@ -14,7 +14,7 @@ import javafx.geometry.VPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 
-public class LAB1 extends Application {
+public class LAB1_SCHEME extends Application {
     @Override // Override the start method in the Application class
     public void start(Stage primaryStage) {
         // Create a GridPane and set its properties
