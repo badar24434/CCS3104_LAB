@@ -1,4 +1,4 @@
-module com.csc3402.lab.ccs3104_lab {
+module com.csc.lab.ccs3104_lab {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
