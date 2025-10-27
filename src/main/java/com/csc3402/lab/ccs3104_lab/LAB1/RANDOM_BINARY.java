@@ -9,7 +9,7 @@ import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.geometry.Insets;
 
-public class EXAMPLE_LAB1 extends Application {
+public class RANDOM_BINARY extends Application {
     @Override // Override the start method in the Application class
     public void start(Stage primaryStage) {
         // Create a GridPane and set its properties
