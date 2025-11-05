@@ -1,4 +1,4 @@
-package adv_prog;
+package com.csc3402.lab.ccs3104_lab.LAB2;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
