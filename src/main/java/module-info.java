@@ -10,6 +10,7 @@ module com.csc.lab.ccs3104_lab {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.rmi;
 
     opens com.csc3402.lab.ccs3104_lab to javafx.fxml;
     exports com.csc3402.lab.ccs3104_lab;
@@ -17,4 +18,6 @@ module com.csc.lab.ccs3104_lab {
     opens com.csc3402.lab.ccs3104_lab.LAB1 to javafx.fxml;
     exports com.csc3402.lab.ccs3104_lab.LAB2;
     opens com.csc3402.lab.ccs3104_lab.LAB2 to javafx.fxml;
+    exports com.csc3402.lab.ccs3104_lab.PROJECT_EXAMPLE;
+    opens com.csc3402.lab.ccs3104_lab.PROJECT_EXAMPLE to javafx.fxml;
 }
