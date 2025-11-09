@@ -1,0 +1,33 @@
+[2025-11-07 03:51:57] No existing tasks file found. Starting with empty task list.
+[2025-11-07 03:51:57] No existing users file found. Starting with empty user list.
+[2025-11-07 03:51:57] Server started. Loaded 0 tasks and 0 users.
+[2025-11-07 03:51:57] Auto-save thread started
+[2025-11-07 03:51:57] Task Server started successfully
+[2025-11-07 03:52:32] User registered: badar
+[2025-11-07 03:52:32] Tasks saved to file. Total tasks: 0
+[2025-11-07 03:52:32] Users saved to file. Total users: 1
+[2025-11-07 03:52:57] Tasks saved to file. Total tasks: 0
+[2025-11-07 03:52:57] Users saved to file. Total users: 1
+[2025-11-07 03:53:01] Task created: TASK-1762458781543-681 - makan nasi (Assigned to: badar)
+[2025-11-07 03:53:01] Tasks saved to file. Total tasks: 1
+[2025-11-07 03:53:01] Users saved to file. Total users: 1
+[2025-11-07 03:53:21] Task updated: TASK-1762458781543-681 - makan nasi
+[2025-11-07 03:53:21] Tasks saved to file. Total tasks: 1
+[2025-11-07 03:53:21] Users saved to file. Total users: 1
+[2025-11-07 03:53:30] Task updated: TASK-1762458781543-681 - makan nasi
+[2025-11-07 03:53:30] Tasks saved to file. Total tasks: 1
+[2025-11-07 03:53:30] Users saved to file. Total users: 1
+[2025-11-07 03:53:34] Summary report generated: task_report_20251107_035334.txt
+[2025-11-07 03:53:34] Summary report generated
+[2025-11-07 03:53:57] Tasks saved to file. Total tasks: 1
+[2025-11-07 03:53:57] Users saved to file. Total users: 1
+[2025-11-07 03:54:57] Tasks saved to file. Total tasks: 1
+[2025-11-07 03:54:57] Users saved to file. Total users: 1
+[2025-11-07 03:54:59] Task updated: TASK-1762458781543-681 - makan nasi
+[2025-11-07 03:54:59] Tasks saved to file. Total tasks: 1
+[2025-11-07 03:54:59] Users saved to file. Total users: 1
+[2025-11-07 03:55:25] Task created: TASK-1762458925669-971 - john (Assigned to: badar)
+[2025-11-07 03:55:25] Tasks saved to file. Total tasks: 2
+[2025-11-07 03:55:25] Users saved to file. Total users: 1
+[2025-11-07 03:55:57] Tasks saved to file. Total tasks: 2
+[2025-11-07 03:55:57] Users saved to file. Total users: 1
