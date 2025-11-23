@@ -245,10 +245,69 @@ public class EightQueens extends Application {
     }
     
     /**
-     * Find next solution (variation)
+     * Find next solution (variation from current state)
      */
     private void findNextSolution() {
-        findNewSolution();
+        clearBoard();
+        
+        // Start from the last row and backtrack to find the next solution
+        if (queens[SIZE - 1] >= 0) {
+            // We have a complete solution, backtrack from the last row
+            queens[SIZE - 1] = -1;
+            int k = SIZE - 2;
+            
+            // Find the next valid configuration
+            while (k >= 0) {
+                int j = findPosition(k);
+                if (j >= 0) {
+                    queens[k] = j;
+                    k++;
+                    break;
+                } else {
+                    queens[k] = -1;
+                    k--;
+                }
+            }
+            
+            // If we found a starting point, complete the solution
+            if (k >= 0) {
+                while (k < SIZE) {
+                    int j = findPosition(k);
+                    if (j < 0) {
+                        queens[k] = -1;
+                        k--;
+                    } else {
+                        queens[k] = j;
+                        k++;
+                    }
+                }
+            }
+            
+            if (k == SIZE) {
+                // Found a new solution
+                solutionCount++;
+                try {
+                    displayQueens();
+                } catch (Exception e) {
+                    displayQueensWithSymbol();
+                }
+                statusLabel.setText("✓ Solution #" + solutionCount + " found!");
+                statusLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #2e7d32; " +
+                                    "-fx-padding: 10px; -fx-background-color: rgba(255,255,255,0.8); " +
+                                    "-fx-background-radius: 5px; -fx-border-color: #64b5f6; " +
+                                    "-fx-border-width: 2px; -fx-border-radius: 5px;");
+            } else {
+                // No more solutions
+                statusLabel.setText("✗ No more solutions found! Click 'Find New Solution' to restart.");
+                statusLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #f57c00; " +
+                                    "-fx-padding: 10px; -fx-background-color: rgba(255,255,255,0.8); " +
+                                    "-fx-background-radius: 5px; -fx-border-color: #64b5f6; " +
+                                    "-fx-border-width: 2px; -fx-border-radius: 5px;");
+            }
+        } else {
+            // No current solution, just find a new one
+            findNewSolution();
+        }
     }
 
     /**
