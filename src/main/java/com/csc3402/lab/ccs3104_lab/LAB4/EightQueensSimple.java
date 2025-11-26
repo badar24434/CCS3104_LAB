@@ -14,7 +14,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
- * Simple Eight Queens Problem Solver
+ * Eight Queens Problem Solver
  * Demonstrates multithreading with backtracking algorithm
  * Lab 4 - CCS3104
  */
@@ -111,7 +111,6 @@ public class EightQueensSimple extends Application {
     
     /**
      * Find next solution using a separate thread
-     * demonstrates multithreading in JavaFX
      */
     private void findNextSolutionThreaded() {
         if (isSearching) {
