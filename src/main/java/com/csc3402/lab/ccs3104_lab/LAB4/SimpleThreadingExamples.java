@@ -85,48 +85,6 @@ public class SimpleThreadingExamples {
         // Total time: max(3 seconds, 3 seconds) = 3 seconds
     }
 
-    // ========== HELPER METHODS ==========
-
-    /**
-     * Simulates Task A - takes 3 seconds
-     */
-    private static void doTaskA() {
-        String threadName = Thread.currentThread().getName();
-        System.out.println("  [Task A] Running on thread: " + threadName);
-
-        for (int i = 1; i <= 3; i++) {
-            System.out.println("  [Task A] Working... " + i + "/3 seconds");
-            sleep(1000); // Sleep 1 second
-        }
-
-        System.out.println("  [Task A] COMPLETED!");
-    }
-
-    /**
-     * Simulates Task B - takes 3 seconds
-     */
-    private static void doTaskB() {
-        String threadName = Thread.currentThread().getName();
-        System.out.println("    [Task B] Running on thread: " + threadName);
-
-        for (int i = 1; i <= 3; i++) {
-            System.out.println("    [Task B] Processing... " + i + "/3 seconds");
-            sleep(1000); // Sleep 1 second
-        }
-
-        System.out.println("    [Task B] COMPLETED!");
-    }
-
-    /**
-     * Helper method to sleep without try-catch clutter
-     */
-    private static void sleep(int milliseconds) {
-        try {
-            Thread.sleep(milliseconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }
 
 
