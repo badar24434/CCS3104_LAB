@@ -1,9 +1,7 @@
 package com.csc3402.lab.ccs3104_lab.LAB4;
 
 /**
- * SIMPLEST POSSIBLE MULTITHREADING EXAMPLES
- * Pure Java - No JavaFX - Just Console Output
- * Perfect for teaching basic concepts
+ * MULTITHREADING EXAMPLES
  */
 public class SimpleThreadingExamples {
 
@@ -26,11 +24,8 @@ public class SimpleThreadingExamples {
 
         System.out.println("\n\n");
 
-        // Example 3: Multiple threads working together
-        System.out.println("EXAMPLE 3: MULTIPLE THREADS");
-        System.out.println("-----------------------------------");
-        example3_MultipleThreads();
     }
+
 
 
     /**
@@ -89,61 +84,6 @@ public class SimpleThreadingExamples {
         // OBSERVE: Tasks run at the same time
         // Total time: max(3 seconds, 3 seconds) = 3 seconds
     }
-
-
-    /**
-     * EXAMPLE 3: MULTIPLE THREADS WITH DIFFERENT TASKS
-     * Shows how threads can do different work simultaneously
-     */
-    public static void example3_MultipleThreads() {
-        // Thread 1: Count up
-        Thread counter = new Thread(() -> {
-            for (int i = 1; i <= 5; i++) {
-                System.out.println("  [Counter] Counting: " + i);
-                sleep(500);
-            }
-        });
-
-        // Thread 2: Print letters
-        Thread printer = new Thread(() -> {
-            char[] letters = {'A', 'B', 'C', 'D', 'E'};
-            for (char letter : letters) {
-                System.out.println("    [Printer] Letter: " + letter);
-                sleep(700);
-            }
-        });
-
-        // Thread 3: Calculate
-        Thread calculator = new Thread(() -> {
-            for (int i = 1; i <= 5; i++) {
-                int result = i * i;
-                System.out.println("      [Calculator] " + i + " squared = " + result);
-                sleep(600);
-            }
-        });
-
-        // Start all threads at once
-        counter.start();
-        printer.start();
-        calculator.start();
-
-        System.out.println("[Main] All threads started! Watch them work together!\n");
-
-        // Wait for all to complete
-        try {
-            counter.join();
-            printer.join();
-            calculator.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("\n[Main] All threads finished!");
-
-        // OBSERVE: All three tasks run at the same time
-        // Output is interleaved - proving they run simultaneously
-    }
-
 
     // ========== HELPER METHODS ==========
 
