@@ -32,25 +32,7 @@ public class SpeedingFineCalculatorModern extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Speeding Fine Calculator - Modern UI");
         
-        // Main container with gradient background
-        BorderPane root = new BorderPane();
-        root.setStyle(createGradientBackground());
         
-        // Header
-        VBox header = createHeader();
-        root.setTop(header);
-        
-        // Main content
-        VBox mainContent = createMainContent();
-        root.setCenter(mainContent);
-        
-        // Footer
-        HBox footer = createFooter();
-        root.setBottom(footer);
-        
-        // Create scene with animations
-        Scene scene = new Scene(root, 650, 750);
-        scene.setFill(Color.TRANSPARENT);
         
         // Apply fade-in animation to the entire scene
         FadeTransition fadeIn = new FadeTransition(Duration.millis(800), root);
