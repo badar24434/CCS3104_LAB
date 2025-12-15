@@ -11,15 +11,13 @@ import javafx.stage.Stage;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-/**
- * RMI Client with JavaFX GUI for Area Calculator
- * This client connects to the remote server and requests area calculations
+nt connects to the remote server and requests area calculations
  */
 public class AreaCalculatorClient extends Application {
     private TextField radiusField;
     private TextArea resultArea;
     private AreaCalculator calculator;
-    
+
     @Override
     public void start(Stage primaryStage) {
         // Setup UI Components
