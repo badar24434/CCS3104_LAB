@@ -11,8 +11,6 @@ import javafx.stage.Stage;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-nt connects to the remote server and requests area calculations
- */
 public class AreaCalculatorClient extends Application {
     private TextField radiusField;
     private TextArea resultArea;
