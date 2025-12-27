@@ -62,7 +62,11 @@ public class SpeedingFineCalculatorModern extends Application {
         primaryStage.show();
     }
     
-   
+    private String createGradientBackground() {
+     // soft blue-to-white gradient
+     return "-fx-background-color: linear-gradient(to bottom right, " +
+         "#ffffff 0%, #eaf5ff 50%, #d6eeff 100%);";
+    }
     
     private VBox createHeader() {
         VBox header = new VBox(10);
