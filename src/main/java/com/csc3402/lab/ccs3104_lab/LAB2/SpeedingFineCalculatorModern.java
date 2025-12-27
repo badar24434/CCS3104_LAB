@@ -157,7 +157,13 @@ public class SpeedingFineCalculatorModern extends Application {
         return mainContent;
     }
     
-   
+    private String createCardStyle() {
+     return "-fx-background-color: rgba(255, 255, 255, 0.98); " +
+         "-fx-background-radius: 20; " +
+         "-fx-border-radius: 20; " +
+         "-fx-border-color: rgba(30,136,229,0.08); " +
+         "-fx-border-width: 1;";
+    }
     
     private DropShadow createCardShadow() {
         DropShadow shadow = new DropShadow();
