@@ -89,19 +89,7 @@ public class SpeedingFineCalculatorModern extends Application {
         
         header.getChildren().addAll(titleLabel, subtitleLabel);
         
-        // Pulse animation for title
-        ScaleTransition pulse = new ScaleTransition(Duration.millis(1500), titleLabel);
-        pulse.setFromX(1.0);
-        pulse.setFromY(1.0);
-        pulse.setToX(1.05);
-        pulse.setToY(1.05);
-        pulse.setCycleCount(Animation.INDEFINITE);
-        pulse.setAutoReverse(true);
-        pulse.play();
         
-        return header;
-    }
-    
     private VBox createMainContent() {
         VBox mainContent = new VBox(20);
         mainContent.setAlignment(Pos.TOP_CENTER);
