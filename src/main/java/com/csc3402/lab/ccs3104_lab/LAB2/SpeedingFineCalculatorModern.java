@@ -83,7 +83,23 @@ public class SpeedingFineCalculatorModern extends Application {
     glow.setRadius(16);
     titleLabel.setEffect(glow);
 
-    
+    Label subtitleLabel = new Label("Calculate your fine instantly");
+    subtitleLabel.setFont(Font.font("Segoe UI", FontWeight.NORMAL, 16));
+    subtitleLabel.setTextFill(Color.web("#1565C0"));
+        
+        header.getChildren().addAll(titleLabel, subtitleLabel);
+        
+        // Pulse animation for title
+        ScaleTransition pulse = new ScaleTransition(Duration.millis(1500), titleLabel);
+        pulse.setFromX(1.0);
+        pulse.setFromY(1.0);
+        pulse.setToX(1.05);
+        pulse.setToY(1.05);
+        pulse.setCycleCount(Animation.INDEFINITE);
+        pulse.setAutoReverse(true);
+        pulse.play();
+        
+        return header;
     }
     
     private VBox createMainContent() {
