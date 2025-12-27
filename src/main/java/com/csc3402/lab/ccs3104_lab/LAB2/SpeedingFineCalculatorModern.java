@@ -108,7 +108,18 @@ public class SpeedingFineCalculatorModern extends Application {
         mainContent.setPadding(new Insets(20));
         mainContent.setMaxWidth(550);
         
+        // Card container
+        VBox card = new VBox(25);
+        card.setAlignment(Pos.TOP_CENTER);
+        card.setPadding(new Insets(35));
+        card.setStyle(createCardStyle());
+        card.setEffect(createCardShadow());
         
+        // Vehicle Type Section
+        VBox vehicleSection = createVehicleTypeSection();
+        
+        // Speed Input Section
+        VBox speedSection = createSpeedInputSection();
         
         // Speed Limit Section
         VBox speedLimitSection = createSpeedLimitSection();
