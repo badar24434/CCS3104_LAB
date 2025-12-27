@@ -133,24 +133,7 @@ public class SpeedingFineCalculatorModern extends Application {
     indicatorLabel.setFont(Font.font("Segoe UI", FontWeight.SEMI_BOLD, 12));
     indicatorLabel.setTextFill(Color.rgb(30, 60, 90));
 
-    VBox indicatorBox = new VBox(5, indicatorLabel, speedIndicator);
-    indicatorBox.setAlignment(Pos.CENTER);
-        
-        // Buttons Section
-        HBox buttonBox = createButtonSection();
-        
-        // Result Section
-        resultBox = createResultSection();
-        resultBox.setVisible(false);
-        resultBox.setManaged(false);
-        
-        card.getChildren().addAll(
-            vehicleSection,
-            speedSection,
-            speedLimitSection,
-            indicatorBox,
-            buttonBox,
-            resultBox
+   
         );
         
         mainContent.getChildren().add(card);
