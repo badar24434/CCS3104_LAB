@@ -11,6 +11,7 @@ module com.csc.lab.ccs3104_lab {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.rmi;
+    requires java.sql;
 
     opens com.csc3402.lab.ccs3104_lab to javafx.fxml;
     exports com.csc3402.lab.ccs3104_lab;
@@ -24,6 +25,8 @@ module com.csc.lab.ccs3104_lab {
     opens com.csc3402.lab.ccs3104_lab.LAB4 to javafx.fxml;
     exports com.csc3402.lab.ccs3104_lab.LAB5;
     opens com.csc3402.lab.ccs3104_lab.LAB5 to javafx.fxml;
+    exports com.csc3402.lab.ccs3104_lab.LAB6;
+    opens com.csc3402.lab.ccs3104_lab.LAB6 to javafx.fxml;
     exports com.csc3402.lab.ccs3104_lab.PROJECT_EXAMPLE;
     opens com.csc3402.lab.ccs3104_lab.PROJECT_EXAMPLE to javafx.fxml;
 }
