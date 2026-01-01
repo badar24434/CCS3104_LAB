@@ -39,21 +39,7 @@ public class TaskServiceImpl extends UnicastRemoteObject implements TaskService 
     /**
      * Load tasks and users from backup files
      */
-    private void loadDataFromFiles() {
-        List<Task> loadedTasks = FileManager.loadTasks();
-        List<String> loadedUsers = FileManager.loadUsers();
-        
-        tasks.addAll(loadedTasks);
-        users.addAll(loadedUsers);
-        
-        // Update task count
-        for (Task task : tasks) {
-            taskCountByUser.merge(task.getAssignedTo(), 1, Integer::sum);
-        }
-        
-        System.out.println("Loaded " + tasks.size() + " tasks and " + users.size() + " users from backup.");
-        FileManager.logAction("Server started. Loaded " + tasks.size() + " tasks and " + users.size() + " users.");
-    }
+    
     
     /**
      * Auto-save thread to periodically backup data
