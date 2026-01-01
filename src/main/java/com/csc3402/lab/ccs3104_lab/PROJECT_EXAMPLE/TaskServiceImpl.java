@@ -79,11 +79,7 @@ public class TaskServiceImpl extends UnicastRemoteObject implements TaskService 
     /**
      * Save tasks and users to backup files
      */
-    private synchronized void saveDataToFiles() {
-        FileManager.saveTasks(new ArrayList<>(tasks));
-        FileManager.saveUsers(new ArrayList<>(users));
-    }
-    
+   
     @Override
     public synchronized Task createTask(Task task) throws RemoteException {
         tasks.add(task);
