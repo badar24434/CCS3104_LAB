@@ -17,7 +17,24 @@ public class TaskServiceImpl extends UnicastRemoteObject implements TaskService 
     private static final long serialVersionUID = 1L;
     
     // Thread-safe collections
-   
+    private final CopyOnWriteArrayList<Task> tasks;
+    private final CopyOnWriteArrayList<String> users;
+    private final ConcurrentHashMap<String, Integer> taskCountByUser;
+    private final LocalDateTime serverStartTime;
+    
+    public TaskServiceImpl() throws RemoteException {
+        super();
+        this.tasks = new CopyOnWriteArrayList<>();
+        this.users = new CopyOnWriteArrayList<>();
+        this.taskCountByUser = new ConcurrentHashMap<>();
+        this.serverStartTime = LocalDateTime.now();
+        
+        // Load existing data from files
+        loadDataFromFiles();
+        
+        // Start auto-save thread
+        startAutoSaveThread();
+    }
     
     /**
      * Load tasks and users from backup files
