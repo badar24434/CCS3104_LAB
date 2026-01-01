@@ -14,16 +14,7 @@ public class TaskServer {
     
     public static void main(String[] args) {
         try {
-            // Start RMI registry
-            System.out.println("Starting RMI Registry on port " + PORT + "...");
-            LocateRegistry.createRegistry(PORT);
-            System.out.println("✓ RMI Registry started successfully");
             
-            // Create and bind the service
-            System.out.println("\nInitializing Task Service...");
-            TaskServiceImpl taskService = new TaskServiceImpl();
-            String url = "rmi://localhost:" + PORT + "/" + SERVICE_NAME;
-            Naming.rebind(url, taskService);
             
             System.out.println("✓ Task Service bound successfully");
             System.out.println("\n" + "=".repeat(60));
