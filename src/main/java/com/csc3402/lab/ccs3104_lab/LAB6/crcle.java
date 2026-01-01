@@ -35,15 +35,7 @@ public class crcle extends Application {
         btClick.setTextFill(Color.WHITE);
         lbTotTime.setFont(Font.font("Times New Roman", FontWeight.BOLD, 20));
         
-        // Style the click counter label
-        lbClick.setFont(Font.font("Times New Roman", FontWeight.BOLD, 16));
-        lbClick.setLayoutX(10);
-        lbClick.setLayoutY(10);
-
-        HBox hbox = new HBox();
-        hbox.getChildren().add(lbTotTime);
-        hbox.setAlignment(Pos.CENTER);
-
+       
         btClick.setOnAction(e -> {
             startTime = System.currentTimeMillis();
             click = 0; // Reset click counter when starting new game
