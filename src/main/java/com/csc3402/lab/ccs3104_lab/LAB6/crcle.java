@@ -22,14 +22,7 @@ public class crcle extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Create a Pane to hold the circle
-        Pane clickPane = new Pane();
-        Button btClick = new Button("Start Game!");
-        clickPane.getChildren().add(btClick);
-        btClick.setLayoutX(145);
-        btClick.setLayoutY(10);
-        btClick.setStyle("-fx-background-color: #79d879");
-        clickPane.setPadding(new Insets(5, 5, 5, 5));
-
+        
         // Set label font
         btClick.setFont(Font.font("Times New Roman", FontWeight.BOLD, 20));
         btClick.setTextFill(Color.WHITE);
