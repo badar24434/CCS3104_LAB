@@ -84,7 +84,16 @@ public class crcle extends Application {
         circlePane.getChildren().clear();
         circlePane.getChildren().add(lbClick); // Re-add the label after clearing
 
-      
+        Random rand = new Random();
+
+        double x = radius + rand.nextDouble() * (circlePane.getWidth() - 2 * radius);
+        double y = radius + rand.nextDouble() * (circlePane.getHeight() - 2 * radius);
+
+        circle.setCenterX(x);
+        circle.setCenterY(y);
+        circle.setStroke(Color.PINK);
+        circle.setFill(Color.color(rand.nextDouble(), rand.nextDouble(), rand.nextDouble()));
+
         circle.setOnMouseClicked(e -> {
             click++;
             lbClick.setText("Circle clicked: " + click);
