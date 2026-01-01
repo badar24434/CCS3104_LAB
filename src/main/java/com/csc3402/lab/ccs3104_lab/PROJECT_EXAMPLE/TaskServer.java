@@ -41,7 +41,10 @@ public class TaskServer {
             
             FileManager.logAction("Task Server started successfully");
             
-           
+            // Keep server running and handle commands
+            Scanner scanner = new Scanner(System.in);
+            boolean running = true;
+            
             while (running) {
                 if (scanner.hasNextLine()) {
                     String command = scanner.nextLine().trim().toLowerCase();
