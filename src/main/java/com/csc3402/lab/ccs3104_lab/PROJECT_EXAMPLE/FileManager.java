@@ -18,15 +18,7 @@ public class FileManager {
     /**
      * Save tasks to file
      */
-    public static synchronized void saveTasks(List<Task> tasks) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(
-                new FileOutputStream(TASKS_FILE))) {
-            oos.writeObject(tasks);
-            logAction("Tasks saved to file. Total tasks: " + tasks.size());
-        } catch (IOException e) {
-            System.err.println("Error saving tasks: " + e.getMessage());
-            logAction("ERROR: Failed to save tasks - " + e.getMessage());
-        }
+     }
     }
     
     /**
