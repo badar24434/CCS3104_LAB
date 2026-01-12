@@ -30,6 +30,41 @@ public class FileManager {
     }
     
     /**
+     * Load tasks from file
+     */
+    @SuppressWarnings("unchecked")
+    public static synchronized List<Task> loadTasks() {
+        File file = new File(TASKS_FILE);
+        if (!file.exists()) {
+            logAction("No existing tasks file found. Starting with empty task list.");
+            return new ArrayList<>();
+        }
+        
+        try (ObjectInputStream ois = new ObjectInputStream(
+                new FileInputStream(TASKS_FILE))) {
+            List<Task> tasks = (List<Task>) ois.readObject();
+            logAction("Tasks loaded from file. Total tasks: " + tasks.size());
+            return tasks;
+        } catch (IOException | ClassNotFoundException e) {
+            System.err.println("Error loading tasks: " + e.getMessage());
+            logAction("ERROR: Failed to load tasks - " + e.getMessage());
+            return new ArrayList<>();
+        }
+    }
+    
+    /**
+     * Save users to file
+     */
+    public static synchronized void saveUsers(List<String> users) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(
+                new FileOutputStream(USERS_FILE))) {
+            oos.writeObject(users);
+            logAction("Users saved to file. Total users: " + users.size());
+        } catch (IOException e) {
+            System.err.println("Error saving users: " + e.getMessage());
+            logAction("ERROR: Failed to save users - " + e.getMessage());
+        }
+    }
     
     /**
      * Load users from file
